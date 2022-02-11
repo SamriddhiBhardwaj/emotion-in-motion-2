@@ -25,9 +25,9 @@ st.sidebar.markdown(
 
 if not os.path.exists("models/emotion_detection_model_for_streamlit.h5"):
     with st.spinner("Loading model..."):
-        os.system("wget --no-check-certificate -O models/emotion_detection_model_for_streamlit.h5 \"https://www.dropbox.com/s/072b5vf4b33bu1l/emotion_detection_model_for_streamlit.h5\"")
+        os.system("wget --no-check-certificate -O emotion_detection_model_for_streamlit.h5 \"https://www.dropbox.com/s/072b5vf4b33bu1l/emotion_detection_model_for_streamlit.h5\"")
 
-model = tf.keras.models.load_model("models/emotion_detection_model_for_streamlit.h5")
+model = tf.keras.models.load_model("emotion_detection_model_for_streamlit.h5")
 
 f = st.file_uploader("Upload an Image")
 
